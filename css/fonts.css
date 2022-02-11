@@ -1,0 +1,37 @@
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/Merriweather-Light.eot');
+    src: url('../fonts/Merriweather-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Merriweather-Light.woff2') format('woff2'),
+        url('../fonts/Merriweather-Light.woff') format('woff'),
+        url('../fonts/Merriweather-Light.ttf') format('truetype'),
+        url('../fonts/Merriweather-Light.svg#Merriweather-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-ExtraBold.eot');
+    src: url('../fonts/PlayfairDisplay-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PlayfairDisplay-ExtraBold.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-ExtraBold.woff') format('woff'),
+        url('../fonts/PlayfairDisplay-ExtraBold.ttf') format('truetype'),
+        url('../fonts/PlayfairDisplay-ExtraBold.svg#PlayfairDisplay-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+
+
+
+
+
+

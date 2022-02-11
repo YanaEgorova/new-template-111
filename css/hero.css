@@ -1,0 +1,195 @@
+
+.js-transitions-disabled * {
+  transition: none !important;
+}
+.carousel {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  perspective: 50vw;
+  perspective-origin: 50% 50%;
+}
+.carousel__control {
+  position: absolute;
+  height: 16rem;
+  width: 4rem;
+  background: var(--main-bg-color);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+}
+.carousel__control a {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 75%;
+  box-sizing: border-box;
+}
+.carousel__control a:hover:before {
+  background-color: rgba(0,0,0,0.4);
+}
+.carousel__control a.active:before,
+.carousel__control a.active:hover:before {
+  background-color: rgba(0,0,0,0.6);
+}
+.carousel__control a:first-child {
+  margin-top: 1.5rem;
+}
+.carousel__control a:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  padding-top: 25%;
+  width: 25%;
+  background: rgba(0,0,0,0.2);
+  content: '';
+  display: block;
+  margin-top: -12.5%;
+}
+.carousel__stage {
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  margin: auto;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(-50vh + 2rem));
+}
+.spinner {
+  position: absolute;
+  width: calc(50vw - (2rem));
+  height: calc(100vh - 4rem);
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  margin: auto;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform-origin: 50% 50%;
+  transform: rotateX(0);
+}
+.js-spin-fwd .spinner {
+  transform: rotateX(-90deg);
+}
+.js-spin-bwd .spinner {
+  transform: rotateX(90deg);
+}
+.js-spin-fwd .spinner--right {
+  transform: rotateX(90deg);
+}
+.js-spin-bwd .spinner--right {
+  transform: rotateX(-90deg);
+}
+.spinner--right {
+  right: 0;
+  left: auto;
+}
+.spinner__face {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.spinner__face.js-next {
+  display: block;
+  transform: rotateX(90deg) translateZ(calc(50vh - 2rem));
+}
+.spinner--right .spinner__face.js-next {
+  transform: rotateX(270deg) translateZ(calc(50vh - 2rem));
+}
+.js-spin-bwd .spinner__face.js-next {
+  transform: rotateX(-90deg) translateZ(calc(50vh - 2rem));
+}
+.js-spin-bwd .spinner--right .spinner__face.js-next {
+  transform: rotateX(-270deg) translateZ(calc(50vh - 2rem));
+}
+.js-active {
+  display: block;
+  transform: translateZ(calc(50vh - 2rem));
+}
+.content {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  left: 0;
+}
+.spinner--right .content {
+  left: -100%;
+}
+.content__left,
+.content__right {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+.content__right {
+  right: 0;
+  left: auto;
+}
+.content__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content__left img {
+    display: block;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    z-index: 2;
+}
+.content__left:after {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+.content__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content__right .content__main {
+  position: absolute;
+  text-align: center;
+  margin: 0;
+}
+.content__right .content__index {
+  font-size: 30rem;
+  position: absolute;
+  right: 2rem;
+  bottom: 5rem;
+  opacity: 0.3;
+  font-family: var(--title-font);
+  color: var(--sub-text-color);
+  pointer-events: none;
+}
+
+.product__name {
+    font-size: 3rem;
+    color: var(--sub-text-color);
+    margin-bottom: 2rem;
+}
+.product__price {
+    display: block;
+    font-size: 3rem;
+    opacity: 0.7;
+    color: var(--sub-text-color);
+    margin-bottom: 3rem;
+}

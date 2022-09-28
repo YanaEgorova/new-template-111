@@ -15,8 +15,10 @@ export const item = (product) => {
           <div class="content__main">
               <p class="product__name js_product-name">${product.name}</p>
               <span class="product__price">$${(product.price).toFixed(2)}</span>
-              <a href="product-page.html?id=${product.id}" class="btn btn--first">details</a>
-              <button class="btn js_add-to-cart">buy</button>
+              <a href="product-page.html?id=${product.id}" class="btn btn--first" style="margin: ${product.isItRing ? 'auto' : ''}">details</a>
+              ${
+                product.isItRing ? '' : '<button class="btn js_add-to-cart">buy</button>'
+              }
           </div>
          
           <h3 class="content__index">$${(product.price).toFixed(2)}</h3>
@@ -25,7 +27,6 @@ export const item = (product) => {
   </div>
   `
 }
-
 
 
 

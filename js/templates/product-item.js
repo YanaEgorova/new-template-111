@@ -6,7 +6,7 @@ export const item = (product) => {
   }
 
   return `
-  <div class="spinner__face js-active js_product" data-bg="${index % 2 ? '#192f4a' : '#2b2533'}" id="${product.id}">
+  <div class="spinner__face js-active js_product" data-bg=""  id="${product.id}">
   <div class="content">
       <div class="content__left">
          <img src="${product.image}" alt="product image">
@@ -27,6 +27,9 @@ export const item = (product) => {
   </div>
   `
 }
+
+
+// data-bg="${index % 2 ? '#192f4a' : '#2b2533'}"
 
 
 

@@ -204,6 +204,28 @@
   <script src="./js/jquery.js"></script>
   <script src="./js/index.js"></script>
 
+  <!-- js-active js_product -->
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    const slides = document.querySelectorAll('.js-active.js_product');
+
+
+ 
+
+    for (var i = 0; i < slides.length; i+= 1) {
+      //  console.log(slides[i]);
+       if(i % 2 === 0) {
+        slides[i].setAttribute('data-bg', getComputedStyle(document.documentElement).getPropertyValue('--third-brand-color'));
+    // slides[i].setAttribute('data-bg', 'red');
+       } else {
+        slides[i].setAttribute('data-bg', getComputedStyle(document.documentElement).getPropertyValue('--second-brand-color'));
+    // slides[i].setAttribute('data-bg', 'blue');
+       }
+    }
+  });
+  </script>
+
 
 </body>
 
